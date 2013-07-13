@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<% include ../header %>
+
+<header>
+	<h2>Agenda de Contatos</h2>
+</header>
+
+<section>
+	<form action="/contatos" method="post">
+		<input type="hidden" name="">
+		<label for="">Nome:</label>
+		<input type="text" name="contato[nome]">
+		<br>
+		<label for="">Email:</label>
+		<input type="text" name="contato[email]">
+		<br>
+		<input type="submit">Criar Contato</input>
+	</form>
+</section>
+
+
+<% include ../exit %>
+<% include ../footer %>

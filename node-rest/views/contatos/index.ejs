@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<% include ../header %>
+
+<header>
+	<h2>Agenda de Contatos</h2>
+</header>
+
+<section>
+	<p>Bem vindo <%- usuario.nome %></p>
+	<a href="/contato/new">Adicionar Contato</a>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>E-mail</th>
+				<th>Ação</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% contatos.forEach( function(contato, index) {%>
+				<tr>
+					<td><%- contato.nome %></td>
+					<td><%- contato.email %></td>
+					<td><a href="/contatos/<%- index%>">Ver Detalhes</a></td>
+				</tr>
+			<% }); %>
+		</tbody>
+	</table>
+</section>
+<% include ../exit %>
+<% include ../footer %>
