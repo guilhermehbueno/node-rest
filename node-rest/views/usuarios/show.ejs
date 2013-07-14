@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<% include ../header %>
+
+<header>
+	<h2>Dados do usuário</h2>
+</header>
+
+<section>
+	<form action="/usuarios/<%- usuario._id%>" method="post">
+		<p>
+			<label for="">Nome:</label>
+			<%- usuario.nome%>
+		</p>
+		<p>
+			<label for="">Email:</label>
+			<%- usuario.nome%>
+		</p>
+		
+		<button type="submit">Excluir</button>
+		<a href="/usuarios/<%- usuario._id%>/edit">Editar</a>
+	</form>
+</section>
+
+<% include ../footer %>

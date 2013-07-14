@@ -1,3 +1,6 @@
+var mongojs = require('mongojs');
+var db = mongojs('test', ['users']);
+
 module.exports = function(app){
 	var ContatoController = {
 		index: function(req, res){
@@ -16,6 +19,9 @@ module.exports = function(app){
 			var contato = req.body.contato,
 				usuario = req.session.usuario;
 			usuario.contatos.push(contato);
+			console.log('Saving: '+contato);
+			console.log('DB: '+db);
+			db.users.save(usuario);
 			res.redirect('/contatos');
 		},
 		show: function(req, res){

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<%include ../header %>
+
+<header>
+	<h2>Usuarios</h2>
+</header>
+
+
+<section>
+	<p>Bem Vindo
+		<table>
+			<thead>
+				<tr>
+					<td>Nome</td>
+					<td>Email</td>
+				</tr>
+			</thead>
+			<tbody>
+				<% users.forEach( function(usuario, index){ %>
+				<tr>
+					<td><%- usuario.nome %></td>
+					<td><%- usuario.email %></td>
+					<td>
+						<a href='/usuarios/<%- usuario._id %>'>Detalhes</a>
+					</td>
+				</tr>
+				<% }); %>
+			</tbody>
+		</table>
+	</p>
+</section>
+
+
+
+<%include ../footer %>

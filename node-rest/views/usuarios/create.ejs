@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<%include ../header %>
+
+<header>
+	<h2>Usuario - criar Usuario</h2>
+</header>
+
+<section>
+	<form action="/usuario" method="post">
+		<label>Nome:</label>
+		<input type="text" name="usuario[nome]">
+		<br>
+		<label for="">Email:</label>
+		<input type="text" name="usuario[email]">
+		<br>
+		<label for="">Senha:</label>
+		<input type="password" name="usuario[password]">
+		<br>
+		<input type="submit">Cadastrar</input>
+	</form>
+</section>
+
+
+<%include ../footer %>
